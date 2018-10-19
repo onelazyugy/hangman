@@ -14,11 +14,11 @@ export class ModeComponent implements OnInit {
   }
 
   playAsUserClicked = () => {
-    this.router.navigate(['/register']);
+    this.router.navigate(['register']);
   }
 
-  playAsGuessClicked = () => {
-    console.log('clicked');
+  playAsGuestClicked = () => {
+    this.router.navigate(['game']);
   }
 
 }
