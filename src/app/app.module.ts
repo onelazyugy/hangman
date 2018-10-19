@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { ModeModule } from './mode/mode.module';
 import { RegisterModule } from './register/register.module';
 import { AppRoutingModule } from './app-routing.module';
+import { GameModule } from './game/game.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppAngularMaterialModule,
     AppAngularFlexLayoutModule,
     ModeModule,
-    RegisterModule
+    RegisterModule,
+    GameModule
   ],
   providers: [],
   bootstrap: [AppComponent]
