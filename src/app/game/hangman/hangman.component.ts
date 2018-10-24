@@ -18,7 +18,7 @@ export class HangmanComponent implements OnInit {
       category: "movie",
       totalAttempt: 0,
       hangmanWordCount: 5,
-      guessedLetter: [],
+      guessedLetter: ['V', 'T', 'A', 'Y'],
       isCorrectGuess: false
     }
     this.game = new Game(gameData.category, gameData.totalAttempt, gameData.hangmanWordCount, gameData.guessedLetter, gameData.isCorrectGuess);

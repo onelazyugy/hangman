@@ -4,7 +4,7 @@
 <div style="padding-bottom:20px">
   <div class="guess-container">
     <div>Guess:</div>
-    <div>A B C D E</div>
+    <div *ngFor="let letter of game.guessedLetter">{{letter}}</div>
   </div>
   <div>
     <form (ngSubmit)="guess(guessLetterForm)" #guessLetterForm="ngForm">

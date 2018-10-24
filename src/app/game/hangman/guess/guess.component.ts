@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { GameService } from '../../game.service';
+import { Game } from '../../model/game.model';
 
 @Component({
   selector: 'app-guess',
@@ -7,10 +9,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./guess.component.css']
 })
 export class GuessComponent implements OnInit {
-
-  constructor() { }
+  game: Game = null;
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
+    console.log('gameService:', this.gameService);
+    this.game = this.gameService.getGame();
   }
 
   guess = (form: NgForm) => {
