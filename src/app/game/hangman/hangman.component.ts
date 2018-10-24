@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hangman.component.css']
 })
 export class HangmanComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {

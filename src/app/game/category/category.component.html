@@ -1,6 +1,4 @@
 <div>
-  categories
-  <ul>
-    <li style="cursor: pointer;" *ngFor="let category of categories"><span (click)="categoryClicked(category.id)">{{category.type}}</span></li>
-  </ul>
+  {{'categories' | uppercaseTextPipe}}
+  <div style="cursor: pointer;" *ngFor="let category of categories"><span (click)="categoryClicked(category.id)">{{category.type}}</span></div>
 </div>

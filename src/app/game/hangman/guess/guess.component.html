@@ -1,12 +1,16 @@
-<div>
+<div style="padding-bottom:20px">
   _ _ _ _ _ _ _ _ _ _
 </div>
-<div>
+<div style="padding-bottom:20px">
   <div class="guess-container">
     <div>Guess:</div>
     <div>A B C D E</div>
   </div>
-  <button style="cursor: pointer;" mat-raised-button color="primary" type="button" (click)="guessClicked()">
-    <span style="font-size: xx-large">GUESS</span>
-  </button>
+  <form (ngSubmit)="guess(guessLetterForm)" #guessLetterForm="ngForm">
+    <mat-form-field style="width: 100%;">
+      <input name="guessLetter" type="text" id="guessLetter" ngModel matInput
+        placeholder="Guess a letter" required>
+    </mat-form-field>
+    <button style="width: 100%; cursor: pointer;" mat-raised-button color="primary" type="submit" [disabled]="!guessLetterForm.valid">Guess</button>
+  </form>
 </div>

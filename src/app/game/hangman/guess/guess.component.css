@@ -1,12 +1,16 @@
-.guess-container {
-    border-radius: 10px;
-    background: #73AD21;
-    padding: 20px; 
-    width: 120px; 
-    cursor: pointer;
-}
 .guess-container{
   border-radius: 6px;
   border-style: solid;
   background: #d7eaea;
+  padding: 10px;
 }
+
+/* .letter {
+    display: inline-block;
+    list-style: none;
+    width: 15px;
+    margin: 0 2%;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: transparent;
+  } */

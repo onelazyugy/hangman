@@ -9,6 +9,7 @@ import { ModeModule } from './mode/mode.module';
 import { RegisterModule } from './register/register.module';
 import { AppRoutingModule } from './app-routing.module';
 import { GameModule } from './game/game.module';
+import { ShareModule } from './share/share.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GameModule } from './game/game.module';
     AppAngularFlexLayoutModule,
     ModeModule,
     RegisterModule,
-    GameModule, 
+    GameModule,
+    ShareModule
   ],
   providers: [],
   bootstrap: [AppComponent]
