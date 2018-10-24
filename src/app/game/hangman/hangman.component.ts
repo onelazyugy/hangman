@@ -16,13 +16,17 @@ export class HangmanComponent implements OnInit {
     //populate the game service with these data
     let gameData = {
       category: "movie",
-      totalAttempt: 0,
-      hangmanWordCount: 5,
-      guessedLetter: ['V', 'T', 'A', 'Y'],
-      guessedCorrectLetter: ['A', 'V'],
-      isCorrectGuess: false
+      isCorrect: false,
+      guessedCorrectLetter: [
+        {letter: 'V', index: 0, isCorrect: false},
+        {letter: '', index: 1, isCorrect: true},
+        {letter: 'E', index: 2, isCorrect: false},
+        {letter: 'T', index: 3, isCorrect: true},
+        {letter: '', index: 4, isCorrect: false},
+      ]
+
     }
-    this.game = new Game(gameData.category, gameData.totalAttempt, gameData.hangmanWordCount, gameData.guessedLetter, gameData.guessedCorrectLetter, gameData.isCorrectGuess);
+    this.game = new Game(gameData.category, gameData.guessedCorrectLetter, gameData.isCorrect);
     this.gameService.setGame(this.game);
   }
 
