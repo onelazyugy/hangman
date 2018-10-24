@@ -6,11 +6,12 @@
     <div>Guess:</div>
     <div>A B C D E</div>
   </div>
-  <form (ngSubmit)="guess(guessLetterForm)" #guessLetterForm="ngForm">
-    <mat-form-field style="width: 100%;">
-      <input name="guessLetter" type="text" id="guessLetter" ngModel matInput
-        placeholder="Guess a letter" required>
-    </mat-form-field>
-    <button style="width: 100%; cursor: pointer;" mat-raised-button color="primary" type="submit" [disabled]="!guessLetterForm.valid">Guess</button>
-  </form>
+  <div>
+    <form (ngSubmit)="guess(guessLetterForm)" #guessLetterForm="ngForm">
+      <mat-form-field style="width: 100%;">
+        <input name="guessLetter" type="text" id="guessLetter" ngModel matInput placeholder="Guess a letter" required>
+      </mat-form-field>
+      <button style="width: 100%; cursor: pointer;" mat-raised-button color="primary" type="submit" [disabled]="!guessLetterForm.valid">Guess</button>
+    </form>
+  </div>
 </div>

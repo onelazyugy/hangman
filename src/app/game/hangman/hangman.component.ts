@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '../game.service';
+import { Game } from '../model/game.model';
 
 @Component({
   selector: 'app-hangman',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hangman.component.css']
 })
 export class HangmanComponent implements OnInit {
-  
-  constructor() { }
+  game: Game = null;
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
+    //load fetch a game session that will include a category, a hangman puzzle
+    //populate the game service with these data
+    let gameData = {
+      category: "movie",
+      totalAttempt: 0,
+      hangmanWordCount: 5,
+      guessedLetter: [],
+      isCorrectGuess: false
+    }
+    this.game = new Game(gameData.category, gameData.totalAttempt, gameData.hangmanWordCount, gameData.guessedLetter, gameData.isCorrectGuess);
+    this.gameService.setGame(this.game);
   }
 
   guessClicked = () => {

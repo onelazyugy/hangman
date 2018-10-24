@@ -10,6 +10,8 @@ import { RegisterModule } from './register/register.module';
 import { AppRoutingModule } from './app-routing.module';
 import { GameModule } from './game/game.module';
 import { ShareModule } from './share/share.module';
+import { GameService } from './game/game.service';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { ShareModule } from './share/share.module';
     GameModule,
     ShareModule
   ],
-  providers: [],
+  providers: [GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
