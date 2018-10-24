@@ -6,13 +6,17 @@ import { GameComponent } from './game.component';
 import { CategoryComponent } from './category/category.component';
 import { HangmanComponent } from './hangman/hangman.component';
 import { TopscoreComponent } from './topscore/topscore.component';
+import { AttemptComponent } from './hangman/attempt/attempt.component';
+import { GuessComponent } from './hangman/guess/guess.component';
 
 @NgModule({
     declarations: [
         GameComponent, 
         CategoryComponent,
         HangmanComponent,
-        TopscoreComponent
+        TopscoreComponent, 
+        AttemptComponent,
+        GuessComponent
     ],
     imports: [
         CommonModule,

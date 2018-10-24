@@ -1,28 +1,10 @@
 <div>
-  Total Attempts:
-  <div>
-      <div class="box"></div>
-      <div class="box"> </div>
-      <div class="box"></div>
-      <div class="box"> </div>
-      <div class="box"></div>
-      <div class="box"></div>
-  </div>
-</div>
-<hr>
-<div>
   Category: dynamic category
 </div>
-<div>
-  _ _ _ _ _
-</div>
-<div>
-  <div class="guess-container">
-    <div>Guess:</div>  
-    <div>A B C D E</div>
-  </div>
-  <button style="cursor: pointer;" mat-raised-button color="primary" type="button" (click)="guessClicked()"><span style="font-size: xx-large">GUESS</span></button>
-</div>
+<hr>
+<app-attempt></app-attempt>
+<hr>
+<app-guess></app-guess>
 <hr>
 <div>
   <img src="https://i.imgur.com/akIMcpI.gif" width="200" height="200" alt="you guessed wrong">
