@@ -12,4 +12,7 @@ export class HangmanComponent implements OnInit {
   ngOnInit() {
   }
 
+  guessClicked = () => {
+    console.log('guess clicked');
+  }
 }

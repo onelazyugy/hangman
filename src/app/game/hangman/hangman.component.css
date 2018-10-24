@@ -1,0 +1,19 @@
+.guess-container {
+    border-radius: 10px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 120px; 
+    cursor: pointer;
+}
+
+.box{
+    width:10px;
+    height:10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    display: inline;
+    margin: 5px;
+    padding-left:15px;
+    background: red;
+  }
