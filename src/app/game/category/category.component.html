@@ -1,0 +1,6 @@
+<div>
+  categories
+  <ul>
+    <li style="cursor: pointer;" *ngFor="let category of categories"><span (click)="categoryClicked(category.id)">{{category.type}}</span></li>
+  </ul>
+</div>

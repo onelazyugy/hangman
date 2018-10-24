@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  categories = ['movies', 'trivia'];
   constructor() { }
 
   ngOnInit() {

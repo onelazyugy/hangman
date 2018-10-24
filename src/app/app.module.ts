@@ -22,7 +22,7 @@ import { GameModule } from './game/game.module';
     AppAngularFlexLayoutModule,
     ModeModule,
     RegisterModule,
-    GameModule
+    GameModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
