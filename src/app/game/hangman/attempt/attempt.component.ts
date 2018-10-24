@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from '../../model/game.model';
+import { GameService } from '../../game.service';
 
 @Component({
   selector: 'app-attempt',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attempt.component.css']
 })
 export class AttemptComponent implements OnInit {
-
-  constructor() { }
+  game: Game;
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
+    this.game = this.gameService.getGame();
   }
 
 }
