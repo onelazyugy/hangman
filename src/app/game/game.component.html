@@ -1,17 +1,20 @@
 
 <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="10px">
   <div class="div-container" fxFlexOrder="1">
-    categories
+    <div>Category</div>
+    <ul>
+      <li *ngFor="let category of categories">{{category}}</li>
+    </ul>
   </div>
   <div class="div-container" fxFlexOrder="2">
-  hangman image
+    hangman image
   </div>
   <div class="div-container" fxFlexOrder="3">
     top score
   </div>
 </div>
 
-<div class="div-container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="10px">
+<div style="margin-top: 10px;" class="div-container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="10px">
   hints and save
 </div>
 
