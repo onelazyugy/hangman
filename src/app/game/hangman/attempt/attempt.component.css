@@ -1,4 +1,4 @@
-.box{
+.box-red{
     width:10px;
     height:10px;
     border-style: solid;
@@ -8,4 +8,16 @@
     margin: 5px;
     padding-left:15px;
     background: red;
+}
+
+.box-normal{
+    width:10px;
+    height:10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2px;
+    display: inline;
+    margin: 5px;
+    padding-left:15px;
+    background: white;
 }

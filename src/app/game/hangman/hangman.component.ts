@@ -17,16 +17,22 @@ export class HangmanComponent implements OnInit {
     let gameData = {
       category: "movie",
       isCorrect: false,
-      guessedCorrectLetter: [
-        {letter: 'V', index: 0, isCorrect: false},
-        {letter: '', index: 1, isCorrect: true},
-        {letter: 'E', index: 2, isCorrect: false},
+      totalGuess: 4,
+      hangmanPhrase: [
+        {letter: 'V', index: 0, isCorrect: true},
+        {letter: '', index: 1, isCorrect: false},
+        {letter: 'E', index: 2, isCorrect: true},
         {letter: 'T', index: 3, isCorrect: true},
         {letter: '', index: 4, isCorrect: false},
+      ],
+      guessedLetters: [
+        {letter: 'V', isCorrect: true}, 
+        {letter: 'E', isCorrect: true}, 
+        {letter: 'T', isCorrect: true},
+        {letter: 'X', isCorrect: false}
       ]
-
     }
-    this.game = new Game(gameData.category, gameData.guessedCorrectLetter, gameData.isCorrect);
+    this.game = new Game(gameData.category, gameData.hangmanPhrase, gameData.guessedLetters, gameData.isCorrect, gameData.totalGuess);
     this.gameService.setGame(this.game);
   }
 

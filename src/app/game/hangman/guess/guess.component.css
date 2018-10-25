@@ -5,12 +5,8 @@
   padding: 10px;
 }
 
-/* .letter {
-    display: inline-block;
-    list-style: none;
-    width: 15px;
-    margin: 0 2%;
-    border-bottom: 1px solid black;
-    text-align: center;
-    color: transparent;
-  } */
+.correct-letter{
+  background-color:#0f0;
+  transition: all 1s ease;
+  color: black;
+}

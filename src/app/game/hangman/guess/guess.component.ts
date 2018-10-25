@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { GameService } from '../../game.service';
 import { Game } from '../../model/game.model';
+import _ from 'lodash';
 
 @Component({
   selector: 'app-guess',

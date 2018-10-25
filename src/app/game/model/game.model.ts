@@ -1,19 +1,15 @@
 export class Game {
     public category: string;
-    // public totalAttempt: number;
-    // public hangmanWordCount: number;
-    // public guessedLetter: string[];
-    // public guessedCorrectLetter: string[];
-    public guessedCorrectLetter: object;
+    public hangmanPhrase: object;
+    public guessedLetters: object;
     public isCorrect: boolean;
+    public totalGuess: number;
 
-    constructor(category: string, guessedCorrectLetter: object, isCorrect: boolean) {
+    constructor(category: string, hangmanPhrase: object, guessedLetters: object, isCorrect: boolean, totalGuess: number) {
         this.category = category;
-        // this.totalAttempt = totalAttempt;
-        // this.hangmanWordCount = hangmanWordCount;
-        // this.guessedLetter = guessedLetter;
-        // this.guessedCorrectLetter = guessedCorrectLetter;
+        this.hangmanPhrase = hangmanPhrase;
+        this.guessedLetters = guessedLetters;
         this.isCorrect = isCorrect;
-        this.guessedCorrectLetter = guessedCorrectLetter;
+        this.totalGuess = totalGuess;
     }
 }

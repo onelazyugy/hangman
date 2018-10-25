@@ -1,11 +1,9 @@
-<div>
-    Total Attempts:
+<div style="margin-bottom: 10px;">
+    Total Attempts: {{game.totalGuess}}
     <div>
-        <div class="box"></div>
-        <div class="box"> </div>
-        <div class="box"></div>
-        <div class="box"> </div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div *ngFor="let i of [1, 2, 3, 4, 5, 6]" style="display: inline;">
+            <div class="box-red" *ngIf="i <= game.totalGuess"></div>
+            <div class="box-normal" *ngIf="i > game.totalGuess"></div>
+        </div>
     </div>
-  </div>
+</div>
