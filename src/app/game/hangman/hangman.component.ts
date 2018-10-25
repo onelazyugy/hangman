@@ -37,11 +37,7 @@ export class HangmanComponent implements OnInit {
         {letter: 'V', isCorrect: true},
         {letter: 'E', isCorrect: true},
         {letter: 'T', isCorrect: true},
-        {letter: 'X', isCorrect: false},
-        {letter: 'X', isCorrect: false},
-        {letter: 'X', isCorrect: false},
-        {letter: 'X', isCorrect: false},
-        {letter: 'X', isCorrect: false},
+        {letter: 'A', isCorrect: false},
       ]
     }
     this.game = new Game(gameData.category, gameData.hangmanPhrase, gameData.guessedLetters, gameData.isCorrect, gameData.totalGuess);
