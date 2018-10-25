@@ -34,8 +34,8 @@ export class HangmanComponent implements OnInit {
         {letter: '', index: 12, isCorrect: false},
       ],
       guessedLetters: [
-        {letter: 'V', isCorrect: true}, 
-        {letter: 'E', isCorrect: true}, 
+        {letter: 'V', isCorrect: true},
+        {letter: 'E', isCorrect: true},
         {letter: 'T', isCorrect: true},
         {letter: 'X', isCorrect: false},
         {letter: 'X', isCorrect: false},

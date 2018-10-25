@@ -9,6 +9,26 @@ export class GameService {
         this.game = game;
     }
 
+    setCategory = (category) => {
+        this.game.category = category;
+    }
+
+    setIsCorrect = (isCorrect) => {
+        this.game.isCorrect = isCorrect; 
+    }
+
+    setTotalGuess = (totalGuess) => {
+        this.game.totalGuess = totalGuess;
+    }
+
+    setHangmanPhrase = (hangmanPhrase) => {
+        this.game.hangmanPhrase = hangmanPhrase;
+    }
+
+    setGuessedLetters = (guessedLetter) => {
+        this.game.guessedLetters.push(guessedLetter);
+    }
+
     getGame = () => {
         return this.game;
     }

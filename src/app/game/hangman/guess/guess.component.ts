@@ -11,6 +11,7 @@ import _ from 'lodash';
 })
 export class GuessComponent implements OnInit {
   game: Game = null;
+  guessedLetter = '';
   constructor(private gameService: GameService) { }
 
   ngOnInit() {
@@ -19,7 +20,9 @@ export class GuessComponent implements OnInit {
   }
 
   guess = (form: NgForm) => {
-    console.log(form);
+    this.guessedLetter = form.value.guessLetter;
+    // send to backend and receive new game state, then set the game state
+    this.gameService.setGuessedLetters({letter: this.guessedLetter, isCorrect: false});
   }
 
 }
