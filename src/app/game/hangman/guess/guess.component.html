@@ -1,23 +1,23 @@
 <div style="padding-bottom:10px">
-    <div style="display: inline; padding-left: 5px; padding-right: 5px; text-decoration: underline;" 
+    <div class="letter"
     *ngFor="let l of game.hangmanPhrase">
-    <span *ngIf="l.letter !== ''" class="correct-letter">{{l.letter}}</span>
-    <span *ngIf="l.letter === ''">""</span>
+      <span *ngIf="l.letter !== ''" class="correct-letter">{{l.letter}}</span>
+      <span *ngIf="l.letter === ''">""</span>
   </div>
 </div>
 <div style="padding-bottom:10px">
   <div class="guess-container">
     <div>Guess:</div>
-    <div style="display: inline; padding-left: 5px; padding-right: 5px;" 
+    <div style="display: inline; padding-left: 5px; padding-right: 5px; word-wrap: break-word;" 
     *ngFor="let l of game.guessedLetters">
-    <span *ngIf="l.isCorrect" [ngStyle]="{color: 'green'}">{{l.letter}}</span>
-    <span *ngIf="!l.isCorrect" [ngStyle]="{color: 'red'}">{{l.letter}}</span>
-  </div>
+      <span *ngIf="l.isCorrect" [ngStyle]="{color: 'green'}">{{l.letter}}</span>
+      <span *ngIf="!l.isCorrect" [ngStyle]="{color: 'red'}">{{l.letter}}</span>
+    </div>
   </div>
   <div>
     <form (ngSubmit)="guess(guessLetterForm)" #guessLetterForm="ngForm">
       <mat-form-field style="width: 100%;">
-        <input name="guessLetter" type="text" id="guessLetter" ngModel matInput placeholder="Guess a letter" required>
+        <input pattern="[a-zA-Z]*" name="guessLetter" type="text" id="guessLetter" ngModel matInput placeholder="Guess a letter" required>
       </mat-form-field>
       <button style="width: 100%; cursor: pointer;" mat-raised-button color="primary" type="submit" [disabled]="!guessLetterForm.valid">Guess</button>
     </form>

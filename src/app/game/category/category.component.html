@@ -1,4 +1,6 @@
 <div>
   {{'categories' | uppercaseTextPipe}}
-  <div style="cursor: pointer;" *ngFor="let category of categories"><span (click)="categoryClicked(category.id)">{{category.type}}</span></div>
+  <div style="cursor: pointer;" *ngFor="let category of categories">
+    <button style="width: 100%; cursor: pointer; margin-top: 5px;" mat-raised-button color="primary" type="button" (click)="categoryClicked(category.id)">{{category.type | uppercaseTextPipe}}</button>
+  </div>
 </div>

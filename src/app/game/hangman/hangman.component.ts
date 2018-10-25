@@ -24,12 +24,24 @@ export class HangmanComponent implements OnInit {
         {letter: 'E', index: 2, isCorrect: true},
         {letter: 'T', index: 3, isCorrect: true},
         {letter: '', index: 4, isCorrect: false},
+        {letter: '', index: 5, isCorrect: false},
+        {letter: '', index: 6, isCorrect: false},
+        {letter: '', index: 7, isCorrect: false},
+        {letter: '', index: 8, isCorrect: false},
+        {letter: '', index: 9, isCorrect: false},
+        {letter: '', index: 10, isCorrect: false},
+        {letter: '', index: 11, isCorrect: false},
+        {letter: '', index: 12, isCorrect: false},
       ],
       guessedLetters: [
         {letter: 'V', isCorrect: true}, 
         {letter: 'E', isCorrect: true}, 
         {letter: 'T', isCorrect: true},
-        {letter: 'X', isCorrect: false}
+        {letter: 'X', isCorrect: false},
+        {letter: 'X', isCorrect: false},
+        {letter: 'X', isCorrect: false},
+        {letter: 'X', isCorrect: false},
+        {letter: 'X', isCorrect: false},
       ]
     }
     this.game = new Game(gameData.category, gameData.hangmanPhrase, gameData.guessedLetters, gameData.isCorrect, gameData.totalGuess);
