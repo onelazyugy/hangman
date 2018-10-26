@@ -19,7 +19,7 @@
       <mat-form-field style="width: 100%;">
         <input pattern="[a-zA-Z]*" name="guessLetter" type="text" id="guessLetter" ngModel matInput placeholder="Guess a letter" style="text-transform:uppercase" required>
       </mat-form-field>
-      <mat-error *ngIf="letterAlreadyTaken" style="font-size: small">Letter already chosen</mat-error>
+      <!-- <mat-error *ngIf="letterAlreadyTaken" style="font-size: small; width: 100%;">Letter already chosen</mat-error> -->
       <button style="width: 100%; cursor: pointer;" mat-raised-button color="primary" type="submit" [disabled]="!guessLetterForm.valid">Guess</button>
     </form>
   </div>

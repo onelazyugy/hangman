@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { Game } from '../model/game.model';
+// mock
+import { one, two, three} from './mock';
+import results from './mockresult';
 
 @Component({
   selector: 'app-hangman',
@@ -14,34 +17,16 @@ export class HangmanComponent implements OnInit {
   ngOnInit() {
     //load fetch a game session that will include a category, a hangman puzzle
     //populate the game service with these data
-    let gameData = {
-      category: "movie",
-      isCorrect: false,
-      totalGuess: 4,
-      hangmanPhrase: [
-        {letter: 'V', index: 0, isCorrect: true},
-        {letter: '', index: 1, isCorrect: false},
-        {letter: 'E', index: 2, isCorrect: true},
-        {letter: 'T', index: 3, isCorrect: true},
-        {letter: '', index: 4, isCorrect: false},
-        {letter: '', index: 5, isCorrect: false},
-        {letter: '', index: 6, isCorrect: false},
-        {letter: '', index: 7, isCorrect: false},
-        {letter: '', index: 8, isCorrect: false},
-        {letter: '', index: 9, isCorrect: false},
-        {letter: '', index: 10, isCorrect: false},
-        {letter: '', index: 11, isCorrect: false},
-        {letter: '', index: 12, isCorrect: false},
-      ],
-      guessedLetters: [
-        {letter: 'V', isCorrect: true},
-        {letter: 'E', isCorrect: true},
-        {letter: 'T', isCorrect: true},
-        {letter: 'A', isCorrect: false},
-      ]
-    }
-    this.game = new Game(gameData.category, gameData.hangmanPhrase, gameData.guessedLetters, gameData.isCorrect, gameData.totalGuess);
+    const words = [one, two, three];
+    const gameData = words[Math.floor(Math.random()*words.length)];
+    this.game = new Game(gameData.id, gameData.category, gameData.hangmanPhrase, gameData.guessedletters, gameData.isCorrect, gameData.totalGuess);
     this.gameService.setGame(this.game);
+    // setTimeout(function(){
+    //   const words = [one, two, three];
+    //   const gameData = words[Math.floor(Math.random()*words.length)];
+    //   this.game = new Game(gameData.id, gameData.category, gameData.hangmanPhrase, gameData.guessedletters, gameData.isCorrect, gameData.totalGuess);
+    //   this.gameService.setGame(this.game);
+    // }, 2000);
   }
 
   guessClicked = () => {
